@@ -1,0 +1,18 @@
+<h1>Hi there!</h1>
+<%  %>
+<%= Time.now %>
+<p>Time now: <%= Time.now %></p>
+
+<form action="/contact">
+  <label for="member">Please type a name</label>
+  <input id="member" type="text" name="member" placeholder="Charly">
+  <input type="submit" value="Submit">
+</form>
+
+<ol>
+  <% @members.each do |member| %>
+    <li><%= member.capitalize %></li>
+  <% end %>
+</ol>
+
+<%= link_to("Contact us please!", contact_path) %>
