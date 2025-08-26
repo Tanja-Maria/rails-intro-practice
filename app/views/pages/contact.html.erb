@@ -1,5 +1,17 @@
-<h2>Write me! 📧</h2>
+<h1>Write me! 📧</h1>
+
+<h2>How do you want to contact</h2>
+
+<form action="/contact" method="get">
+  <label for="member">Please type a name</label>
+  <input id="member" type="text" name="member" placeholder="Type in a name" value="<%= params[:member] %>">
+  <input type="submit" value="Submit">
+</form>
+
+<ol>
+  <% @members.each do |member| %>
+    <li><%= member.capitalize %></li>
+  <% end %>
+</ol>
 
 <%= link_to("Back to Home", root_path) %>
-
-
